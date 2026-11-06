@@ -1,0 +1,35 @@
+
+# Secrets and environment variables
+.env
+.env.*
+!.env.example
+
+# Python virtual environments
+venv/
+.venv/
+
+# Python generated files
+__pycache__/
+*.py[cod]
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# IDE and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local database files and backups
+*.sqlite
+*.sqlite3
+*.db
+*.sql
+!/database/schema.sql
+
+# Dependencies
+node_modules/
+# Local database configuration
+/config/database.php

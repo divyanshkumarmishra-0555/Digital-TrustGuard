@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Digital TrustGuard</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- TrustGuard CSS -->
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <style>
+
+        body {
+            background: #f8fafc;
+        }
+
+        .trust-navbar {
+            background: #0f172a;
+            padding: 15px 0;
+        }
+
+        .trust-logo {
+            color: white;
+            font-size: 24px;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        .trust-logo span:last-child {
+            color: #60a5fa;
+        }
+
+        .logo-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            background: #2563eb;
+            border-radius: 10px;
+            margin-right: 8px;
+        }
+
+        .navbar .nav-link {
+            color: #cbd5e1;
+            margin-left: 15px;
+        }
+
+        .navbar .nav-link:hover {
+            color: white;
+        }
+
+        .hero-section {
+            padding: 80px 0 90px;
+            background:
+                linear-gradient(
+                    135deg,
+                    #eff6ff,
+                    #f8fafc
+                );
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 50px;
+            background: #dbeafe;
+            color: #2563eb;
+            font-weight: 700;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            font-size: 56px;
+            font-weight: 800;
+            color: #0f172a;
+        }
+
+        .hero-title span {
+            color: #2563eb;
+        }
+
+        .hero-description {
+            max-width: 700px;
+            margin: 20px auto 40px;
+            color: #64748b;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .analyzer-card {
+            max-width: 850px;
+            margin: auto;
+            background: white;
+            border-radius: 22px;
+            padding: 30px;
+            box-shadow:
+                0 15px 45px rgba(
+                    15,
+                    23,
+                    42,
+                    0.10
+                );
+        }
+
+        .input-tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .input-tab {
+            border: none;
+            background: #f1f5f9;
+            color: #64748b;
+            padding: 11px 18px;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .input-tab.active {
+            background: #2563eb;
+            color: white;
+        }
+
+        .input-panel {
+            display: none;
+        }
+
+        .active-panel {
+            display: block;
+        }
+
+        .input-label {
+            color: #334155;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .main-input-wrapper {
+            position: relative;
+        }
+
+        .input-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #64748b;
+        }
+
+        .main-input {
+            width: 100%;
+            padding: 15px 15px 15px 45px;
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            outline: none;
+        }
+
+        .main-input:focus,
+        .main-textarea:focus {
+            border-color: #2563eb;
+            box-shadow:
+                0 0 0 3px
+                rgba(37, 99, 235, 0.10);
+        }
+
+        .main-textarea {
+            width: 100%;
+            min-height: 180px;
+            padding: 15px;
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            resize: vertical;
+            outline: none;
+        }
+
+        .input-type-selector {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .input-type-button {
+            border: 1px solid #cbd5e1;
+            background: white;
+            color: #475569;
+            padding: 9px 15px;
+            border-radius: 9px;
+            cursor: pointer;
+        }
+
+        .input-type-button.active {
+            background: #dbeafe;
+            border-color: #2563eb;
+            color: #2563eb;
+        }
+
+        .upload-area {
+            border: 2px dashed #cbd5e1;
+            border-radius: 15px;
+            padding: 45px 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .upload-area:hover {
+            border-color: #2563eb;
+            background: #f8fafc;
+        }
+
+        .upload-icon {
+            font-size: 40px;
+            color: #2563eb;
+        }
+
+        .upload-area p {
+            color: #64748b;
+            margin-bottom: 5px;
+        }
+
+        .upload-area span {
+            color: #94a3b8;
+            font-size: 13px;
+        }
+
+        .analyze-button {
+            width: 100%;
+            border: none;
+            background: #2563eb;
+            color: white;
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            margin-top: 25px;
+        }
+
+        .analyze-button:hover {
+            background: #1d4ed8;
+        }
+
+        .analyze-button:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .trust-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-label {
+            color: #2563eb;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+        }
+
+        .section-heading h2 {
+            color: #0f172a;
+            font-weight: 800;
+            margin-top: 10px;
+        }
+
+        .section-heading p {
+            color: #64748b;
+        }
+
+        .step-card,
+        .feature-card {
+            height: 100%;
+            background: white;
+            border-radius: 18px;
+            padding: 30px;
+            box-shadow:
+                0 8px 25px rgba(
+                    15,
+                    23,
+                    42,
+                    0.06
+                );
+        }
+
+        .step-number {
+            color: #2563eb;
+            font-weight: 800;
+            font-size: 13px;
+        }
+
+        .step-icon {
+            width: 55px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #dbeafe;
+            color: #2563eb;
+            border-radius: 14px;
+            font-size: 24px;
+            margin: 20px 0;
+        }
+
+        .step-card h4,
+        .feature-card h5 {
+            color: #0f172a;
+            font-weight: 700;
+        }
+
+        .step-card p,
+        .feature-card p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        .feature-card > i {
+            color: #2563eb;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .features-section {
+            background: #f1f5f9;
+        }
+
+        .trust-footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 40px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .footer-right {
+            text-align: right;
+        }
+
+        .footer-right span {
+            color: #64748b;
+        }
+
+        @media (max-width: 767px) {
+
+            .hero-section {
+                padding: 50px 0;
+            }
+
+            .hero-title {
+                font-size: 40px;
+            }
+
+            .analyzer-card {
+                padding: 20px;
+            }
+
+            .trust-indicators {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+
+            .footer-right {
+                text-align: left;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+====================================================== -->
+
+<nav class="navbar navbar-expand-lg trust-navbar">
+
+    <div class="container">
+
+        <a
+            class="navbar-brand trust-logo"
+            href="index.html"
+        >
+
+            <span class="logo-icon">
+                <i class="bi bi-shield-check"></i>
+            </span>
+
+            Trust<span>Guard</span>
+
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMenu"
+        >
+
+            <i class="bi bi-list text-white"></i>
+
+        </button>
+
+
+        <div
+            class="collapse navbar-collapse"
+            id="navbarMenu"
+        >
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="#how-it-works"
+                    >
+                        How it works
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="#features"
+                    >
+                        Features
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="history.html"
+                    >
+
+                        <i class="bi bi-clock-history"></i>
+
+                        History
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     HERO
+====================================================== -->
+
+<section class="hero-section">
+
+    <div class="container">
+
+        <div class="text-center">
+
+            <div class="hero-badge">
+
+                <i class="bi bi-shield-lock-fill"></i>
+
+                Digital Trust Assessment
+
+            </div>
+
+
+            <h1 class="hero-title">
+
+                Can I
+                <span>trust this?</span>
+
+            </h1>
+
+
+            <p class="hero-description">
+
+                Analyze suspicious websites and messages
+                with an explainable digital trust assessment.
+
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             ANALYZER
+        ================================================== -->
+
+        <div class="analyzer-card">
+
+
+            <!-- INPUT TABS -->
+
+            <div class="input-tabs">
+
+                <button
+                    class="input-tab active"
+                    type="button"
+                    onclick="selectInput('url', this)"
+                >
+
+                    <i class="bi bi-link-45deg"></i>
+
+                    URL
+
+                </button>
+
+
+                <button
+                    class="input-tab"
+                    type="button"
+                    onclick="selectInput('text', this)"
+                >
+
+                    <i class="bi bi-chat-left-text"></i>
+
+                    Text
+
+                </button>
+
+
+                <button
+                    class="input-tab"
+                    type="button"
+                    onclick="selectInput('image', this)"
+                >
+
+                    <i class="bi bi-image"></i>
+
+                    Image
+
+                </button>
+
+
+                <button
+                    class="input-tab"
+                    type="button"
+                    onclick="selectInput('video', this)"
+                >
+
+                    <i class="bi bi-camera-video"></i>
+
+                    Video
+
+                </button>
+
+
+                <button
+                    class="input-tab"
+                    type="button"
+                    onclick="selectInput('qr', this)"
+                >
+
+                    <i class="bi bi-qr-code-scan"></i>
+
+                    QR Code
+
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 URL
+            ================================================== -->
+
+            <div
+                id="url-input"
+                class="input-panel active-panel"
+            >
+
+                <div class="input-label">
+
+                    <i class="bi bi-link-45deg"></i>
+
+                    Enter a suspicious URL
+
+                </div>
+
+
+                <div class="main-input-wrapper">
+
+                    <i class="bi bi-globe2 input-icon"></i>
+
+
+                    <input
+                        type="text"
+                        id="urlField"
+                        class="main-input"
+                        placeholder="https://example.com"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 TEXT
+            ================================================== -->
+
+            <div
+                id="text-input"
+                class="input-panel"
+            >
+
+                <div class="input-label">
+
+                    <i class="bi bi-chat-left-text"></i>
+
+                    Paste a suspicious message
+
+                </div>
+
+
+                <div class="input-type-selector">
+
+                    <button
+                        type="button"
+                        id="textModeButton"
+                        class="input-type-button active"
+                        onclick="selectInputType('text')"
+                    >
+
+                        <i class="bi bi-chat-text"></i>
+
+                        Text / Message
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        id="urlModeButton"
+                        class="input-type-button"
+                        onclick="selectInputType('url')"
+                    >
+
+                        <i class="bi bi-link-45deg"></i>
+
+                        Website URL
+
+                    </button>
+
+                </div>
+
+
+                <textarea
+                    id="textField"
+                    class="main-textarea"
+                    placeholder="Paste a suspicious message, email, news article or social media post..."
+                ></textarea>
+
+            </div>
+
+
+            <!-- =================================================
+                 IMAGE
+            ================================================== -->
+
+            <div
+                id="image-input"
+                class="input-panel"
+            >
+
+                <div class="input-label">
+
+                    <i class="bi bi-image"></i>
+
+                    Upload an image or screenshot
+
+                </div>
+
+
+                <div
+                    class="upload-area"
+                    onclick="document.getElementById('imageFile').click()"
+                >
+
+                    <i class="bi bi-cloud-arrow-up upload-icon"></i>
+
+                    <h5>Image analysis coming next</h5>
+
+                    <p>
+                        Image upload interface is ready.
+                    </p>
+
+                    <span>
+                        PNG, JPG, JPEG, WEBP
+                    </span>
+
+                </div>
+
+
+                <input
+                    type="file"
+                    id="imageFile"
+                    accept="image/*"
+                    hidden
+                >
+
+            </div>
+
+
+            <!-- =================================================
+                 VIDEO
+            ================================================== -->
+
+            <div
+                id="video-input"
+                class="input-panel"
+            >
+
+                <div class="input-label">
+
+                    <i class="bi bi-camera-video"></i>
+
+                    Upload a suspicious video
+
+                </div>
+
+
+                <div
+                    class="upload-area"
+                    onclick="document.getElementById('videoFile').click()"
+                >
+
+                    <i class="bi bi-camera-video upload-icon"></i>
+
+                    <h5>Video analysis coming next</h5>
+
+                    <p>
+                        Video upload interface is ready.
+                    </p>
+
+                    <span>
+                        MP4, MOV, WEBM
+                    </span>
+
+                </div>
+
+
+                <input
+                    type="file"
+                    id="videoFile"
+                    accept="video/*"
+                    hidden
+                >
+
+            </div>
+
+
+            <!-- =================================================
+                 QR
+            ================================================== -->
+
+            <div
+                id="qr-input"
+                class="input-panel"
+            >
+
+                <div class="input-label">
+
+                    <i class="bi bi-qr-code-scan"></i>
+
+                    Upload a QR code
+
+                </div>
+
+
+                <div
+                    class="upload-area"
+                    onclick="document.getElementById('qrFile').click()"
+                >
+
+                    <i class="bi bi-qr-code upload-icon"></i>
+
+                    <h5>QR analysis coming next</h5>
+
+                    <p>
+                        QR upload interface is ready.
+                    </p>
+
+                    <span>
+                        PNG, JPG, JPEG
+                    </span>
+
+                </div>
+
+
+                <input
+                    type="file"
+                    id="qrFile"
+                    accept="image/*"
+                    hidden
+                >
+
+            </div>
+
+
+            <!-- =================================================
+                 ANALYZE BUTTON
+            ================================================== -->
+
+            <button
+                id="analyzeButton"
+                class="analyze-button"
+                type="button"
+                onclick="startAnalysis()"
+            >
+
+                <i class="bi bi-shield-check"></i>
+
+                Analyze with TrustGuard
+
+            </button>
+
+
+            <!-- =================================================
+                 TRUST INDICATORS
+            ================================================== -->
+
+            <div class="trust-indicators">
+
+                <div>
+
+                    <i class="bi bi-lock-fill"></i>
+
+                    Private
+
+                </div>
+
+
+                <div>
+
+                    <i class="bi bi-lightning-charge-fill"></i>
+
+                    Fast
+
+                </div>
+
+
+                <div>
+
+                    <i class="bi bi-search"></i>
+
+                    Explainable
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     HOW IT WORKS
+====================================================== -->
+
+<section
+    class="section"
+    id="how-it-works"
+>
+
+    <div class="container">
+
+        <div class="section-heading text-center">
+
+            <span class="section-label">
+                HOW IT WORKS
+            </span>
+
+            <h2>
+                Three steps to digital trust
+            </h2>
+
+            <p>
+                TrustGuard combines multiple signals to help
+                you understand digital content.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4 mt-4">
+
+            <div class="col-md-4">
+
+                <div class="step-card">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <div class="step-icon">
+
+                        <i class="bi bi-upload"></i>
+
+                    </div>
+
+                    <h4>
+                        Submit
+                    </h4>
+
+                    <p>
+                        Paste a URL or suspicious message.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="step-card">
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <div class="step-icon">
+
+                        <i class="bi bi-cpu"></i>
+
+                    </div>
+
+                    <h4>
+                        Analyze
+                    </h4>
+
+                    <p>
+                        TrustGuard examines suspicious signals.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="step-card">
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <div class="step-icon">
+
+                        <i class="bi bi-bar-chart"></i>
+
+                    </div>
+
+                    <h4>
+                        Understand
+                    </h4>
+
+                    <p>
+                        Receive a score, evidence and recommendation.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FEATURES
+====================================================== -->
+
+<section
+    class="section features-section"
+    id="features"
+>
+
+    <div class="container">
+
+        <div class="section-heading text-center">
+
+            <span class="section-label">
+                WHAT WE ANALYZE
+            </span>
+
+            <h2>
+                One place for digital trust
+            </h2>
+
+        </div>
+
+
+        <div class="row g-4 mt-4">
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="feature-card">
+
+                    <i class="bi bi-link-45deg"></i>
+
+                    <h5>
+                        URL Security
+                    </h5>
+
+                    <p>
+                        Identify suspicious domains and URLs.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="feature-card">
+
+                    <i class="bi bi-fingerprint"></i>
+
+                    <h5>
+                        Scam Detection
+                    </h5>
+
+                    <p>
+                        Detect urgency, threats and suspicious requests.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="feature-card">
+
+                    <i class="bi bi-newspaper"></i>
+
+                    <h5>
+                        Content Analysis
+                    </h5>
+
+                    <p>
+                        Analyze suspicious messages and content.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="feature-card">
+
+                    <i class="bi bi-images"></i>
+
+                    <h5>
+                        Media Analysis
+                    </h5>
+
+                    <p>
+                        Media analysis can be connected next.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer class="trust-footer">
+
+    <div class="container">
+
+        <div class="footer-content">
+
+            <div>
+
+                <div class="trust-logo">
+
+                    <span class="logo-icon">
+
+                        <i class="bi bi-shield-check"></i>
+
+                    </span>
+
+                    Trust<span>Guard</span>
+
+                </div>
+
+                <p class="mt-2">
+                    Helping people make safer digital decisions.
+                </p>
+
+            </div>
+
+
+            <div class="footer-right">
+
+                Digital TrustGuard
+
+                <br>
+
+                <span>
+                    Built for a safer digital world.
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- Bootstrap JavaScript -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
+
+
+
+<!-- =====================================================
+     TRUSTGUARD JAVASCRIPT
+====================================================== -->
+
+<script>
+
+let selectedInput = "url";
+
+let selectedInputType = "text";
+
+
+/*
+|--------------------------------------------------------------------------
+| Select main input
+|--------------------------------------------------------------------------
+*/
+
+function selectInput(type, button) {
+
+    selectedInput = type;
+
+
+    document
+        .querySelectorAll(".input-tab")
+        .forEach(function(tab) {
+
+            tab.classList.remove("active");
+
+        });
+
+
+    button.classList.add("active");
+
+
+    document
+        .querySelectorAll(".input-panel")
+        .forEach(function(panel) {
+
+            panel.classList.remove("active-panel");
+
+        });
+
+
+    document
+        .getElementById(type + "-input")
+        .classList.add("active-panel");
+
+}
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Select text mode
+|--------------------------------------------------------------------------
+*/
+
+function selectInputType(type) {
+
+    selectedInputType = type;
+
+
+    const textButton =
+        document.getElementById(
+            "textModeButton"
+        );
+
+
+    const urlButton =
+        document.getElementById(
+            "urlModeButton"
+        );
+
+
+    const textField =
+        document.getElementById(
+            "textField"
+        );
+
+
+    if (type === "text") {
+
+        textButton.classList.add("active");
+
+        urlButton.classList.remove("active");
+
+
+        textField.placeholder =
+            "Paste a suspicious message, email, news article or social media post...";
+
+    }
+
+    else {
+
+        urlButton.classList.add("active");
+
+        textButton.classList.remove("active");
+
+
+        textField.placeholder =
+            "Paste a website URL, for example https://example.com";
+
+    }
+
+}
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Start Analysis
+|--------------------------------------------------------------------------
+*/
+
+async function startAnalysis() {
+
+    let content = "";
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | URL
+    |--------------------------------------------------------------------------
+    */
+
+    if (selectedInput === "url") {
+
+        content =
+            document
+                .getElementById("urlField")
+                .value
+                .trim();
+
+    }
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | TEXT
+    |--------------------------------------------------------------------------
+    */
+
+    else if (selectedInput === "text") {
+
+        content =
+            document
+                .getElementById("textField")
+                .value
+                .trim();
+
+    }
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Image / Video / QR
+    |--------------------------------------------------------------------------
+    */
+
+    else {
+
+        alert(
+            "This input type is not connected to the backend yet. Please use URL or Text."
+        );
+
+        return;
+
+    }
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Validate
+    |--------------------------------------------------------------------------
+    */
+
+    if (content === "") {
+
+        alert(
+            "Please enter something to analyze."
+        );
+
+        return;
+
+    }
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Analyze button
+    |--------------------------------------------------------------------------
+    */
+
+    const button =
+        document.getElementById(
+            "analyzeButton"
+        );
+
+
+    const originalButton =
+        button.innerHTML;
+
+
+    button.innerHTML =
+        '<i class="bi bi-hourglass-split"></i> Analyzing...';
+
+
+    button.disabled = true;
+
+
+    try {
+
+
+        let response;
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | URL analysis
+        |--------------------------------------------------------------------------
+        */
+
+        if (selectedInput === "url") {
+
+            response =
+                await fetch(
+                    "api/url_api.php",
+                    {
+
+                        method: "POST",
+
+                        headers: {
+
+                            "Content-Type":
+                                "application/json"
+
+                        },
+
+                        body:
+                            JSON.stringify({
+
+                                url: content
+
+                            })
+
+                    }
+                );
+
+        }
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | Text analysis
+        |--------------------------------------------------------------------------
+        */
+
+        else {
+
+            response =
+                await fetch(
+                    "api/analyze.php",
+                    {
+
+                        method: "POST",
+
+                        headers: {
+
+                            "Content-Type":
+                                "application/json"
+
+                        },
+
+                        body:
+                            JSON.stringify({
+
+                                input_type:
+                                    selectedInputType,
+
+                                input_content:
+                                    content
+
+                            })
+
+                    }
+                );
+
+        }
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | HTTP error
+        |--------------------------------------------------------------------------
+        */
+
+        if (!response.ok) {
+
+            throw new Error(
+                "HTTP " +
+                response.status
+            );
+
+        }
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | JSON response
+        |--------------------------------------------------------------------------
+        */
+
+        const result =
+            await response.json();
+
+
+        console.log(
+            "TrustGuard response:",
+            result
+        );
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | API error
+        |--------------------------------------------------------------------------
+        */
+
+        if (!result.success) {
+
+            alert(
+                result.message ||
+                "Analysis failed."
+            );
+
+            return;
+
+        }
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | IMPORTANT
+        |--------------------------------------------------------------------------
+        | Open the saved analysis report.
+        |--------------------------------------------------------------------------
+        */
+
+        if (result.analysis_id) {
+
+            window.location.href =
+                "analysis.html?id=" +
+                encodeURIComponent(
+                    result.analysis_id
+                );
+
+        }
+
+        else {
+
+            /*
+            |--------------------------------------------------------------------------
+            | URL API currently may not return analysis_id.
+            |--------------------------------------------------------------------------
+            */
+
+            alert(
+                "Analysis completed, but no saved analysis ID was returned."
+            );
+
+        }
+
+    }
+
+
+    catch (error) {
+
+        console.error(
+            "TrustGuard error:",
+            error
+        );
+
+
+        alert(
+            "Unable to connect to the TrustGuard analysis server."
+        );
+
+    }
+
+
+    finally {
+
+        button.innerHTML =
+            originalButton;
+
+        button.disabled = false;
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>

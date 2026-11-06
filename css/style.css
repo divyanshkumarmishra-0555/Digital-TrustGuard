@@ -1,0 +1,2785 @@
+/* =====================================================
+   TRUSTGUARD GLOBAL STYLES
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #080b12;
+
+    color: #f8fafc;
+
+    overflow-x: hidden;
+
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.trust-navbar {
+
+    padding: 20px 0;
+
+    background: rgba(8, 11, 18, 0.92);
+
+    border-bottom: 1px solid #1e293b;
+
+}
+
+
+.trust-logo {
+
+    font-size: 23px;
+
+    font-weight: 700;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+}
+
+
+.trust-logo span {
+
+    color: #5b8cff;
+
+}
+
+
+.logo-icon {
+
+    color: #5b8cff;
+
+    margin-right: 6px;
+
+}
+
+
+.nav-link {
+
+    color: #94a3b8 !important;
+
+    margin-left: 25px;
+
+    transition: 0.2s;
+
+}
+
+
+.nav-link:hover {
+
+    color: #ffffff !important;
+
+}
+
+
+.login-button {
+
+    border-radius: 8px;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero-section {
+
+    position: relative;
+
+    padding: 100px 0 120px;
+
+}
+
+
+.hero-content {
+
+    max-width: 950px;
+
+    margin: auto;
+
+}
+
+
+.hero-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 9px 16px;
+
+    border-radius: 50px;
+
+    background: #101a32;
+
+    border: 1px solid #23345d;
+
+    color: #7ea2ff;
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.hero-title {
+
+    font-size: clamp(48px, 7vw, 78px);
+
+    font-weight: 800;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.hero-title span {
+
+    color: #5b8cff;
+
+}
+
+
+.hero-description {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    color: #94a3b8;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 45px;
+
+}
+
+
+/* =====================================================
+   ANALYZER CARD
+===================================================== */
+
+.analyzer-card {
+
+    background: #10151f;
+
+    border: 1px solid #263246;
+
+    border-radius: 20px;
+
+    padding: 10px;
+
+    max-width: 850px;
+
+    margin: auto;
+
+    box-shadow:
+
+        0 25px 70px rgba(0, 0, 0, 0.35);
+
+}
+
+
+/* =====================================================
+   INPUT TABS
+===================================================== */
+
+.input-tabs {
+
+    display: flex;
+
+    gap: 5px;
+
+    padding: 5px;
+
+    background: #0b1019;
+
+    border-radius: 13px;
+
+}
+
+
+.input-tab {
+
+    flex: 1;
+
+    background: transparent;
+
+    border: none;
+
+    color: #64748b;
+
+    padding: 13px 8px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.input-tab i {
+
+    margin-right: 5px;
+
+}
+
+
+.input-tab:hover {
+
+    color: #ffffff;
+
+}
+
+
+.input-tab.active {
+
+    background: #1c2a4a;
+
+    color: #7ea2ff;
+
+}
+
+
+/* =====================================================
+   INPUT PANELS
+===================================================== */
+
+.input-panel {
+
+    display: none;
+
+    padding: 25px 20px;
+
+}
+
+
+.active-panel {
+
+    display: block;
+
+}
+
+
+.input-label {
+
+    text-align: left;
+
+    color: #cbd5e1;
+
+    font-size: 14px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.input-label i {
+
+    color: #5b8cff;
+
+    margin-right: 6px;
+
+}
+
+
+/* =====================================================
+   URL INPUT
+===================================================== */
+
+.main-input-wrapper {
+
+    display: flex;
+
+    align-items: center;
+
+    background: #0b1019;
+
+    border: 1px solid #263246;
+
+    border-radius: 12px;
+
+    padding: 0 15px;
+
+}
+
+
+.input-icon {
+
+    color: #64748b;
+
+}
+
+
+.main-input {
+
+    width: 100%;
+
+    background: transparent;
+
+    border: none;
+
+    outline: none;
+
+    color: #ffffff;
+
+    padding: 17px 12px;
+
+    font-size: 15px;
+
+}
+
+
+.main-input::placeholder {
+
+    color: #475569;
+
+}
+
+
+/* =====================================================
+   TEXT INPUT
+===================================================== */
+
+.main-textarea {
+
+    width: 100%;
+
+    min-height: 150px;
+
+    resize: vertical;
+
+    background: #0b1019;
+
+    border: 1px solid #263246;
+
+    border-radius: 12px;
+
+    padding: 16px;
+
+    color: #ffffff;
+
+    outline: none;
+
+}
+
+
+.main-textarea::placeholder {
+
+    color: #475569;
+
+}
+
+
+/* =====================================================
+   UPLOAD
+===================================================== */
+
+.upload-area {
+
+    padding: 45px 20px;
+
+    border: 1px dashed #334155;
+
+    border-radius: 14px;
+
+    background: #0b1019;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.upload-area:hover {
+
+    border-color: #5b8cff;
+
+    background: #0e1524;
+
+}
+
+
+.upload-icon {
+
+    font-size: 35px;
+
+    color: #5b8cff;
+
+}
+
+
+.upload-area h5 {
+
+    margin-top: 15px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.upload-area p {
+
+    color: #94a3b8;
+
+    margin-bottom: 5px;
+
+}
+
+
+.upload-area span {
+
+    font-size: 12px;
+
+    color: #64748b;
+
+}
+
+
+/* =====================================================
+   ANALYZE BUTTON
+===================================================== */
+
+.analyze-button {
+
+    width: 100%;
+
+    border: none;
+
+    background: #5b8cff;
+
+    color: #ffffff;
+
+    font-weight: 700;
+
+    padding: 17px;
+
+    border-radius: 11px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.analyze-button:hover {
+
+    background: #4778ed;
+
+    transform: translateY(-1px);
+
+}
+
+
+.analyze-button i {
+
+    margin-right: 7px;
+
+}
+
+
+/* =====================================================
+   TRUST INDICATORS
+===================================================== */
+
+.trust-indicators {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    padding: 18px 5px 8px;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+}
+
+
+.trust-indicators i {
+
+    color: #5b8cff;
+
+    margin-right: 5px;
+
+}
+
+
+/* =====================================================
+   GENERAL SECTIONS
+===================================================== */
+
+.section {
+
+    padding: 100px 0;
+
+    border-top: 1px solid #151e2d;
+
+}
+
+
+.section-heading {
+
+    max-width: 650px;
+
+    margin: auto;
+
+}
+
+
+.section-label {
+
+    color: #5b8cff;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.section-heading h2 {
+
+    font-size: 40px;
+
+    margin: 15px 0;
+
+}
+
+
+.section-heading p {
+
+    color: #94a3b8;
+
+    line-height: 1.7;
+
+}
+
+
+/* =====================================================
+   STEP CARDS
+===================================================== */
+
+.step-card {
+
+    position: relative;
+
+    height: 100%;
+
+    background: #10151f;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 16px;
+
+    padding: 30px;
+
+    transition: 0.2s;
+
+}
+
+
+.step-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: #31466e;
+
+}
+
+
+.step-number {
+
+    color: #263246;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+}
+
+
+.step-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #17233d;
+
+    color: #6f96ff;
+
+    border-radius: 12px;
+
+    font-size: 23px;
+
+    margin: 25px 0;
+
+}
+
+
+.step-card p {
+
+    color: #94a3b8;
+
+    line-height: 1.6;
+
+}
+
+
+/* =====================================================
+   FEATURE CARDS
+===================================================== */
+
+.features-section {
+
+    background: #0b1019;
+
+}
+
+
+.feature-card {
+
+    height: 100%;
+
+    background: #10151f;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 16px;
+
+    padding: 28px;
+
+    transition: 0.2s;
+
+}
+
+
+.feature-card:hover {
+
+    border-color: #31466e;
+
+    transform: translateY(-4px);
+
+}
+
+
+.feature-card > i {
+
+    font-size: 28px;
+
+    color: #5b8cff;
+
+}
+
+
+.feature-card h5 {
+
+    margin-top: 20px;
+
+}
+
+
+.feature-card p {
+
+    color: #94a3b8;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.trust-footer {
+
+    padding: 40px 0;
+
+    border-top: 1px solid #1e293b;
+
+}
+
+
+.footer-content {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+.footer-content p {
+
+    color: #64748b;
+
+    margin-top: 10px;
+
+    margin-bottom: 0;
+
+}
+
+
+.footer-right {
+
+    text-align: right;
+
+    color: #94a3b8;
+
+    font-size: 14px;
+
+}
+
+
+.footer-right span {
+
+    color: #475569;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+
+    .hero-section {
+
+        padding: 70px 0 80px;
+
+    }
+
+
+    .hero-title {
+
+        letter-spacing: -2px;
+
+    }
+
+
+    .input-tabs {
+
+        overflow-x: auto;
+
+    }
+
+
+    .input-tab {
+
+        min-width: 90px;
+
+    }
+
+
+    .trust-indicators {
+
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .footer-content {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .footer-right {
+
+        text-align: left;
+
+    }
+
+}
+/* =====================================================
+   TRUSTGUARD RESULTS DASHBOARD
+===================================================== */
+
+.results-section {
+
+    padding: 80px 20px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f8fafc 0%,
+            #ffffff 100%
+        );
+
+}
+
+
+/* Header */
+
+.results-header {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+}
+
+
+.results-label {
+
+    display: inline-block;
+
+    color: #2563eb;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.results-header h2 {
+
+    font-size: 38px;
+
+    font-weight: 800;
+
+    color: #0f172a;
+
+    margin: 0 0 10px;
+
+}
+
+
+.results-header p {
+
+    color: #64748b;
+
+    font-size: 16px;
+
+}
+
+
+/* Trust Score Card */
+
+.trust-score-card {
+
+    max-width: 900px;
+
+    margin: 0 auto 40px;
+
+    padding: 40px;
+
+    background: white;
+
+    border-radius: 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 45px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(15, 23, 42, 0.08);
+
+    border:
+        1px solid #e2e8f0;
+
+}
+
+
+/* Score Circle */
+
+.score-circle {
+
+    width: 190px;
+
+    height: 190px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        conic-gradient(
+            #ef4444 0deg,
+            #ef4444 90deg,
+            #fee2e2 90deg,
+            #fee2e2 360deg
+        );
+
+    position: relative;
+
+}
+
+
+.score-circle::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 155px;
+
+    height: 155px;
+
+    border-radius: 50%;
+
+    background: white;
+
+}
+
+
+.score-circle > div {
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+}
+
+
+#trustScore {
+
+    font-size: 48px;
+
+    font-weight: 800;
+
+    color: #0f172a;
+
+}
+
+
+.score-circle small {
+
+    font-size: 18px;
+
+    color: #64748b;
+
+}
+
+
+/* Score Details */
+
+.score-details {
+
+    flex: 1;
+
+}
+
+
+.risk-badge {
+
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    border-radius: 999px;
+
+    background: #fee2e2;
+
+    color: #b91c1c;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.score-details h3 {
+
+    font-size: 28px;
+
+    margin: 0 0 8px;
+
+    color: #0f172a;
+
+}
+
+
+.score-details p {
+
+    color: #64748b;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* Progress bar */
+
+.score-bar {
+
+    width: 100%;
+
+    height: 12px;
+
+    background: #e2e8f0;
+
+    border-radius: 999px;
+
+    overflow: hidden;
+
+}
+
+
+.score-progress {
+
+    width: 0%;
+
+    height: 100%;
+
+    background: #ef4444;
+
+    border-radius: 999px;
+
+    transition:
+        width 1s ease;
+
+}
+
+
+/* Evidence */
+
+.evidence-section {
+
+    max-width: 900px;
+
+    margin: 0 auto 40px;
+
+}
+
+
+.section-title span {
+
+    color: #2563eb;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.section-title h3 {
+
+    margin-top: 5px;
+
+    font-size: 28px;
+
+    color: #0f172a;
+
+}
+
+
+.evidence-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(250px, 1fr)
+        );
+
+    gap: 16px;
+
+}
+
+
+.evidence-card {
+
+    background: #FFFCD1;
+
+    border: 2px solid #000000;
+
+    border-radius: 12px;
+
+    padding: 22px;
+
+    box-shadow:
+        5px 5px 0 #000000;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.evidence-card:hover {
+
+    transform: translate(-2px, -2px);
+
+    box-shadow:
+        7px 7px 0 #000000;
+
+}
+
+
+.evidence-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #fee2e2;
+
+    color: #dc2626;
+
+    margin-bottom: 14px;
+
+    font-size: 18px;
+
+}
+
+
+.evidence-card h4 {
+
+    margin: 0 0 8px;
+
+    color: #0f172a;
+
+    font-size: 17px;
+
+}
+
+
+.evidence-card p {
+
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+
+/* Recommendation */
+
+.recommendation-card {
+
+    max-width: 900px;
+
+    margin: 0 auto 40px;
+
+    padding: 25px;
+
+    display: flex;
+
+    gap: 20px;
+
+    background: #fff7ed;
+
+    border:
+        1px solid #fed7aa;
+
+    border-radius: 18px;
+
+}
+
+
+.recommendation-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ffedd5;
+
+    color: #ea580c;
+
+    border-radius: 12px;
+
+    font-size: 22px;
+
+}
+
+
+.recommendation-card span {
+
+    color: #ea580c;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.recommendation-card h3 {
+
+    margin:
+        5px 0 8px;
+
+    color: #0f172a;
+
+}
+
+
+.recommendation-card p {
+
+    margin: 0;
+
+    color: #475569;
+
+    line-height: 1.6;
+
+}
+
+
+/* New Analysis */
+
+.new-analysis {
+
+    text-align: center;
+
+}
+
+
+.new-analysis-button {
+
+    padding: 13px 22px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 12px;
+
+    background: white;
+
+    color: #334155;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        all 0.2s ease;
+
+}
+
+
+.new-analysis-button:hover {
+
+    background: #f8fafc;
+
+    border-color: #94a3b8;
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .trust-score-card {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 30px 20px;
+
+    }
+
+
+    .score-details {
+
+        width: 100%;
+
+    }
+
+
+    .results-header h2 {
+
+        font-size: 30px;
+
+    }
+
+}
+/* =====================================================
+   INPUT TYPE SELECTOR
+===================================================== */
+
+.input-type-selector {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.input-type-button {
+
+    padding: 10px 18px;
+
+    border: 1px solid #cbd5e1;
+
+    background: #ffffff;
+
+    color: #475569;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: all 0.2s ease;
+
+}
+
+
+.input-type-button:hover {
+
+    border-color: #2563eb;
+
+    color: #2563eb;
+
+}
+
+
+.input-type-button.active {
+
+    background: #2563eb;
+
+    border-color: #2563eb;
+
+    color: #ffffff;
+
+}
+
+
+@media (max-width: 600px) {
+
+    .input-type-selector {
+
+        flex-direction: column;
+
+    }
+
+    .input-type-button {
+
+        width: 100%;
+
+    }
+
+}
+/* =====================================================
+   TRUST SCORE CIRCLE
+===================================================== */
+
+.trust-score-circle {
+
+    width: 180px;
+
+    height: 180px;
+
+    border-radius: 50%;
+
+    background:
+        conic-gradient(
+            #22c55e 0deg,
+            #22c55e 0deg,
+            #e5e7eb 0deg,
+            #e5e7eb 360deg
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+    margin: 20px auto;
+
+}
+
+
+.trust-score-circle::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 145px;
+
+    height: 145px;
+
+    border-radius: 50%;
+
+    background: white;
+
+}
+
+
+.trust-score-inner {
+
+    position: relative;
+
+    z-index: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.trust-score-inner span {
+
+    font-size: 42px;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    color: #1e293b;
+
+}
+
+
+.trust-score-inner small {
+
+    margin-top: 6px;
+
+    font-size: 14px;
+
+    color: #64748b;
+
+    font-weight: 600;
+
+}
+/* =====================================================
+   ANALYZED CONTENT
+===================================================== */
+
+.analyzed-content {
+
+    margin-top: 18px;
+
+    display: inline-block;
+
+    max-width: 100%;
+
+    padding: 10px 16px;
+
+    border-radius: 10px;
+
+    background: #f1f5f9;
+
+    color: #475569;
+
+    font-size: 14px;
+
+    font-family: monospace;
+
+    word-break: break-all;
+
+}
+/* =====================================================
+   ANALYSIS SIGNALS
+===================================================== */
+
+.signals-section {
+
+    margin-top: 30px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.active-signals {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+}
+
+
+.signal-card {
+
+    padding: 9px 14px;
+
+    border-radius: 999px;
+
+    background: #eff6ff;
+
+    border: 1px solid #bfdbfe;
+
+    color: #1d4ed8;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+/* =====================================================
+   TRUSTGUARD 2D LIGHT THEME
+   STEP 14.15
+===================================================== */
+
+/* =========================
+   GLOBAL
+========================= */
+
+body {
+    background: #FFFCD1;
+    color: #000000;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.trust-navbar {
+    background: #CDEBC5;
+    border-bottom: 2px solid #000000;
+}
+
+.trust-logo {
+    color: #000000;
+}
+
+.trust-logo span {
+    color: #000000;
+}
+
+.logo-icon {
+    color: #000000;
+}
+
+.nav-link {
+    color: #000000 !important;
+}
+
+.nav-link:hover {
+    color: #000000 !important;
+}
+
+.login-button {
+    background: #FFF9C2;
+    color: #000000;
+    border: 2px solid #000000;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero-section {
+    background: #FFFCD1;
+}
+
+.hero-badge {
+    background: #FFF9C2;
+    border: 2px solid #000000;
+    color: #000000;
+}
+
+.hero-title {
+    color: #000000;
+}
+
+.hero-title span {
+    color: #000000;
+}
+
+.hero-description {
+    color: #000000;
+}
+
+
+/* =========================
+   ANALYZER CARD
+========================= */
+
+.analyzer-card {
+    background: #CDEBC5;
+    border: 2px solid #000000;
+    border-radius: 0;
+    box-shadow: 8px 8px 0 #000000;
+}
+
+
+/* =========================
+   INPUT TABS
+========================= */
+
+.input-tabs {
+    background: #FFFCD1;
+    border: 2px solid #000000;
+    border-radius: 0;
+}
+
+.input-tab {
+    color: #000000;
+    border-radius: 0;
+}
+
+.input-tab:hover {
+    color: #000000;
+    background: #FFF9C2;
+}
+
+.input-tab.active {
+    background: #FFF9C2;
+    color: #000000;
+    border: 2px solid #000000;
+}
+
+
+/* =========================
+   INPUT PANELS
+========================= */
+
+.input-label {
+    color: #000000;
+}
+
+.input-label i {
+    color: #000000;
+}
+
+
+/* =========================
+   URL INPUT
+========================= */
+
+.main-input-wrapper {
+    background: #FFFCD1;
+    border: 2px solid #000000;
+    border-radius: 0;
+}
+
+.input-icon {
+    color: #000000;
+}
+
+.main-input {
+    color: #000000;
+}
+
+.main-input::placeholder {
+    color: #555555;
+}
+
+
+/* =========================
+   TEXT INPUT
+========================= */
+
+.main-textarea {
+    background: #FFFCD1;
+    border: 2px solid #000000;
+    border-radius: 0;
+    color: #000000;
+}
+
+.main-textarea::placeholder {
+    color: #555555;
+}
+
+
+/* =========================
+   UPLOAD
+========================= */
+
+.upload-area {
+    background: #FFFCD1;
+    border: 2px dashed #000000;
+    border-radius: 0;
+}
+
+.upload-area:hover {
+    border-color: #000000;
+    background: #FFF9C2;
+}
+
+.upload-icon {
+    color: #000000;
+}
+
+.upload-area p,
+.upload-area span {
+    color: #000000;
+}
+
+
+/* =========================
+   ANALYZE BUTTON
+========================= */
+
+.analyze-button {
+    background: #FFF9C2;
+    color: #000000;
+    border: 2px solid #000000;
+    border-radius: 0;
+    box-shadow: 5px 5px 0 #000000;
+}
+
+.analyze-button:hover {
+    background: #CDEBC5;
+    color: #000000;
+    transform: translate(2px, 2px);
+    box-shadow: 3px 3px 0 #000000;
+}
+
+
+/* =========================
+   TRUST INDICATORS
+========================= */
+
+.trust-indicators {
+    color: #000000;
+}
+
+.trust-indicators i {
+    color: #000000;
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.section {
+    background: #FFFCD1;
+    border-top: 2px solid #000000;
+}
+
+.section-label {
+    color: #000000;
+}
+
+.section-heading h2 {
+    color: #000000;
+}
+
+.section-heading p {
+    color: #000000;
+}
+
+
+/* =========================
+   STEP CARDS
+========================= */
+
+.step-card {
+    background: #CDEBC5;
+    border: 2px solid #000000;
+    border-radius: 0;
+    box-shadow: 6px 6px 0 #000000;
+}
+
+.step-card:hover {
+    transform: translate(2px, 2px);
+    border-color: #000000;
+    box-shadow: 4px 4px 0 #000000;
+}
+
+.step-number {
+    color: #000000;
+}
+
+.step-icon {
+    background: #FFF9C2;
+    color: #000000;
+    border: 2px solid #000000;
+    border-radius: 0;
+}
+
+.step-card p {
+    color: #000000;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features-section {
+    background: #FFFCD1;
+}
+
+.feature-card {
+    background: #CDEBC5;
+    border: 2px solid #000000;
+    border-radius: 0;
+    box-shadow: 6px 6px 0 #000000;
+}
+
+.feature-card:hover {
+    border-color: #000000;
+    transform: translate(2px, 2px);
+    box-shadow: 4px 4px 0 #000000;
+}
+
+.feature-card > i {
+    color: #000000;
+}
+
+.feature-card p {
+    color: #000000;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.trust-footer {
+    background: #CDEBC5;
+    border-top: 2px solid #000000;
+}
+
+.footer-content p {
+    color: #000000;
+}
+
+.footer-right {
+    color: #000000;
+}
+
+.footer-right span {
+    color: #000000;
+}
+
+
+/* =====================================================
+   RESULTS DASHBOARD
+===================================================== */
+
+.results-section {
+    background: #FFFCD1;
+}
+
+
+/* Results header */
+
+.results-label {
+    color: #000000;
+}
+
+.results-header h2 {
+    color: #000000;
+}
+
+.results-header p {
+    color: #000000;
+}
+
+
+/* Trust score card */
+
+.trust-score-card {
+    background: #CDEBC5;
+    border: 2px solid #000000;
+    border-radius: 0;
+    box-shadow: 8px 8px 0 #000000;
+}
+
+
+/* Score circle */
+
+.score-circle {
+    background:
+        conic-gradient(
+            #000000 0deg,
+            #000000 0deg,
+            #FFF9C2 0deg,
+            #FFF9C2 360deg
+        );
+}
+
+.score-circle::before {
+    background: #CDEBC5;
+}
+
+#trustScore {
+    color: #000000;
+}
+
+.score-circle small {
+    color: #000000;
+}
+
+
+/* Risk badge */
+
+.risk-badge {
+    background: #FFF9C2;
+    color: #000000;
+    border: 2px solid #000000;
+    border-radius: 0;
+}
+
+
+/* Score details */
+
+.score-details h3 {
+    color: #000000;
+}
+
+.score-details p {
+    color: #000000;
+}
+
+
+/* Progress bar */
+
+.score-bar {
+    background: #FFF9C2;
+    border: 2px solid #000000;
+    border-radius: 0;
+}
+
+.score-progress {
+    background: #000000;
+    border-radius: 0;
+}
+
+
+/* =========================
+   EVIDENCE
+========================= */
+
+.section-title span {
+    color: #000000;
+}
+
+.section-title h3 {
+    color: #000000;
+}
+
+.evidence-card {
+    background: #CDEBC5;
+    border: 2px solid #000000;
+    border-radius: 0;
+    box-shadow: 5px 5px 0 #000000;
+}
+
+.evidence-card:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 3px 3px 0 #000000;
+}
+
+.evidence-icon {
+    background: #FFF9C2;
+    color: #000000;
+    border: 2px solid #000000;
+    border-radius: 0;
+}
+
+.evidence-card h4 {
+    color: #000000;
+}
+
+.evidence-card p {
+    color: #000000;
+}
+
+
+/* =========================
+   RECOMMENDATION
+========================= */
+
+.recommendation-card {
+    background: #FFF9C2;
+    border: 2px solid #000000;
+    border-radius: 0;
+    box-shadow: 6px 6px 0 #000000;
+}
+
+.recommendation-icon {
+    background: #CDEBC5;
+    color: #000000;
+    border: 2px solid #000000;
+    border-radius: 0;
+}
+
+.recommendation-card span {
+    color: #000000;
+}
+
+.recommendation-card h3 {
+    color: #000000;
+}
+
+.recommendation-card p {
+    color: #000000;
+}
+
+
+/* =========================
+   NEW ANALYSIS
+========================= */
+
+.new-analysis-button {
+    background: #CDEBC5;
+    color: #000000;
+    border: 2px solid #000000;
+    border-radius: 0;
+    box-shadow: 5px 5px 0 #000000;
+}
+
+.new-analysis-button:hover {
+    background: #FFF9C2;
+    border-color: #000000;
+}
+
+
+/* =========================
+   INPUT TYPE SELECTOR
+========================= */
+
+.input-type-button {
+    background: #CDEBC5;
+    color: #000000;
+    border: 2px solid #000000;
+    border-radius: 0;
+}
+
+.input-type-button:hover {
+    border-color: #000000;
+    color: #000000;
+    background: #FFF9C2;
+}
+
+.input-type-button.active {
+    background: #FFF9C2;
+    border-color: #000000;
+    color: #000000;
+}
+
+
+/* =========================
+   TRUST SCORE CIRCLE
+========================= */
+
+.trust-score-circle {
+    background:
+        conic-gradient(
+            #000000 0deg,
+            #000000 0deg,
+            #FFF9C2 0deg,
+            #FFF9C2 360deg
+        );
+}
+
+.trust-score-circle::before {
+    background: #CDEBC5;
+}
+
+.trust-score-inner span {
+    color: #000000;
+}
+
+.trust-score-inner small {
+    color: #000000;
+}
+
+
+/* =========================
+   ANALYZED CONTENT
+========================= */
+
+.analyzed-content {
+    background: #FFF9C2;
+    color: #000000;
+    border: 2px solid #000000;
+    border-radius: 0;
+}
+
+
+/* =========================
+   ANALYSIS SIGNALS
+========================= */
+
+.signal-card {
+    background: #CDEBC5;
+    border: 2px solid #000000;
+    color: #000000;
+    border-radius: 0;
+}
+
+
+/* =========================
+   REMOVE SOFT EFFECTS
+========================= */
+
+* {
+    text-shadow: none;
+}
+ /* =====================================================
+    HISTORY PAGE — 2D GREEN THEME
+ ===================================================== */
+
+ /* History page background */
+ body {
+     background: #FFFCD1;
+ }
+
+ /* History cards / containers */
+ .history-card,
+ .history-item,
+ .history-container,
+ .history-box {
+     background: #C7F6B6 !important;
+     border: 2px solid #000000 !important;
+     box-shadow: 6px 6px 0 #000000 !important;
+ }
+
+ /* Tables */
+ table {
+     border: 2px solid #000000 !important;
+ }
+
+ th,
+ td {
+     border: 2px solid #000000 !important;
+ }
+
+ /* White table/history areas */
+ .table,
+ .table-responsive {
+     background: #C7F6B6 !important;
+     border-color: #000000 !important;
+ }
+
+ /* Buttons on history page */
+ button {
+     border-color: #000000;
+ }
+
+ /* Links/buttons */
+ a {
+     border-color: #000000;
+ }
+ /* =====================================================
+   TRUSTGUARD HISTORY PAGE
+   STEP 14.16
+===================================================== */
+
+/* History page background */
+body {
+    background: #FFFCD1;
+    color: #000000;
+}
+
+
+/* History heading */
+body h1 {
+    color: #000000;
+}
+
+body .section-label {
+    color: #000000;
+}
+
+body .text-muted {
+    color: #000000 !important;
+}
+
+
+#historyContainer .card {
+    background: #d1e7b7 !important;
+    border: 2px solid #000000 !important;
+    border-radius: 12px !important;
+    box-shadow: 6px 6px 0 #000000 !important;
+    overflow: hidden;
+}
+
+#historyContainer .card-body {
+    background: #d1e7b7 !important;
+    border-radius: 10px !important;
+}
+
+#historyContainer .card:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 4px 4px 0 #000000 !important;
+}
+
+
+/* Card body */
+#historyContainer .card-body {
+    background: #d1e7b7 !important;
+}
+
+
+/* Card title */
+#historyContainer .card-title {
+    color: #000000 !important;
+}
+
+
+/* Card text */
+#historyContainer .card-text {
+    color: #000000 !important;
+}
+
+
+/* Risk level and date */
+#historyContainer .text-muted {
+    color: #000000 !important;
+}
+
+
+/* Input type badge */
+#historyContainer .badge {
+    background: #FFF9C2 !important;
+    color: #000000 !important;
+    border: 2px solid #000000;
+    border-radius: 0;
+}
+
+
+/* Score */
+#historyContainer strong {
+    color: #000000 !important;
+}
+
+
+/* Back button */
+body .btn-primary {
+    background: #FFF9C2 !important;
+    color: #000000 !important;
+    border: 2px solid #000000 !important;
+    border-radius: 0 !important;
+    box-shadow: 5px 5px 0 #000000 !important;
+}
+
+
+/* Back button hover */
+body .btn-primary:hover {
+    background: #C7F6B6 !important;
+    color: #000000 !important;
+    border-color: #000000 !important;
+    transform: translate(2px, 2px);
+    box-shadow: 3px 3px 0 #000000 !important;
+}
+
+
+/* No-history message */
+#historyContainer .alert {
+    background: #C7F6B6 !important;
+    color: #000000 !important;
+    border: 2px solid #000000 !important;
+    border-radius: 0 !important;
+}
+
+
+/* History card hover */
+#historyContainer .card:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 4px 4px 0 #000000 !important;
+}
+ /* Make history cards even more compact */
+#historyContainer .card-body {
+    padding: 8px !important;
+}
+
+#historyContainer .card-title {
+    margin-top: 3px !important;
+    margin-bottom: 3px !important;
+}
+
+#historyContainer .card-text {
+    margin-top: 3px !important;
+    margin-bottom: 3px !important;
+}
+
+#historyContainer .d-flex {
+    margin-bottom: 6px !important;
+}
+
+#historyContainer small {
+    line-height: 1.2 !important;
+}
+/* =====================================================
+   TRUSTGUARD ANALYSIS PAGE — 2D THEME
+   STEP 14.17
+===================================================== */
+
+/* =========================
+   PAGE
+========================= */
+
+body {
+    background: #FFFCD1 !important;
+    color: #000000;
+}
+
+.analysis-page {
+    background: #FFFCD1;
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back-button {
+    background: #FFF9C2 !important;
+    color: #000000 !important;
+    border: 2px solid #000000 !important;
+    border-radius: 10px !important;
+    box-shadow: 5px 5px 0 #000000 !important;
+}
+
+.back-button:hover {
+    background: #BCE8B8 !important;
+    color: #000000 !important;
+    border-color: #000000 !important;
+    transform: translate(2px, 2px);
+    box-shadow: 3px 3px 0 #000000 !important;
+}
+
+
+/* =========================
+   REPORT HEADER
+========================= */
+
+.report-header {
+    color: #000000;
+}
+
+.report-label {
+    color: #000000 !important;
+}
+
+.report-header h1 {
+    color: #000000 !important;
+}
+
+.report-header p {
+    color: #000000 !important;
+}
+
+
+/* =========================
+   ANALYSIS INFORMATION
+========================= */
+
+.analysis-info {
+    color: #000000 !important;
+}
+
+
+/* =========================
+   MAIN SCORE CARD
+========================= */
+
+.score-card {
+    background: #FFFCD1 !important;
+    border: 2px solid #000000 !important;
+    border-radius: 14px !important;
+    box-shadow: 8px 8px 0 #000000 !important;
+}
+
+.score-card-body {
+    background: #FFFCD1;
+    border-radius: 12px;
+}
+
+
+/* =========================
+   SCORE CIRCLE
+========================= */
+
+.score-circle {
+    border: 2px solid #000000;
+}
+
+.score-inner {
+    background: #BCE8B8 !important;
+    border: 2px solid #000000;
+}
+
+.score-number {
+    color: #000000 !important;
+}
+
+.score-out-of {
+    color: #000000 !important;
+}
+
+
+/* =========================
+   RISK BADGE
+========================= */
+
+.risk-badge {
+    color: #000000 !important;
+    border: 2px solid #000000 !important;
+    border-radius: 10px !important;
+}
+
+
+/* =========================
+   SCORE DETAILS
+========================= */
+
+.score-details h2 {
+    color: #000000 !important;
+}
+
+.score-details-label {
+    color: #000000 !important;
+}
+
+
+/* =========================
+   PROGRESS BAR
+========================= */
+
+.score-progress-container {
+    background: #FFF9C2 !important;
+    border: 2px solid #000000;
+    border-radius: 0 !important;
+}
+
+.score-progress {
+    border-radius: 0 !important;
+}
+
+
+/* =========================
+   REPORT CARDS
+========================= */
+
+.report-card {
+    background: #FFFCD1 !important;
+    border: 2px solid #000000 !important;
+    border-radius: 14px !important;
+    box-shadow: 6px 6px 0 #000000 !important;
+}
+
+.report-card-body {
+    background: #FFFCD1;
+    border-radius: 12px;
+}
+
+.report-card-title {
+    color: #000000 !important;
+}
+
+.report-card-title i {
+    color: #000000 !important;
+}
+
+
+/* =========================
+   ANALYZED CONTENT
+========================= */
+
+.input-type {
+    color: #000000 !important;
+}
+
+.input-content {
+    background: #FFF9C2 !important;
+    border: 2px solid #000000 !important;
+    border-radius: 10px !important;
+    color: #000000 !important;
+}
+
+
+/* =========================
+   EVIDENCE SECTION
+========================= */
+
+.evidence-card {
+    background: #BCE8B8 !important;
+    border: 2px solid #000000 !important;
+    border-radius: 12px !important;
+    box-shadow: 5px 5px 0 #000000 !important;
+}
+
+.evidence-icon {
+    border: 2px solid #000000;
+    border-radius: 10px !important;
+}
+
+.evidence-title {
+    color: #000000 !important;
+}
+
+.evidence-severity {
+    border: 2px solid #000000;
+    border-radius: 8px !important;
+}
+
+.evidence-explanation {
+    color: #000000 !important;
+}
+
+.evidence-result {
+    color: #000000;
+}
+
+
+/* =========================
+   EVIDENCE HEADING
+========================= */
+
+.analysis-page h2 {
+    color: #000000;
+}
+
+.analysis-page .text-muted {
+    color: #000000 !important;
+}
+
+
+/* =========================
+   RECOMMENDATION
+========================= */
+
+.recommendation-card {
+    background: #FFF9C2 !important;
+    border: 2px solid #000000 !important;
+    border-radius: 14px !important;
+    box-shadow: 6px 6px 0 #000000 !important;
+}
+
+.recommendation-icon {
+    background: #BCE8B8 !important;
+    color: #000000 !important;
+    border: 2px solid #000000;
+    border-radius: 10px !important;
+}
+
+.recommendation-label {
+    color: #000000 !important;
+}
+
+.recommendation-title {
+    color: #000000 !important;
+}
+
+.recommendation-text {
+    color: #000000 !important;
+}
+
+
+/* =========================
+   ANALYZE SOMETHING ELSE
+========================= */
+
+.analysis-page .btn-primary {
+    background: #FFF9C2 !important;
+    color: #000000 !important;
+    border: 2px solid #000000 !important;
+    border-radius: 10px !important;
+    box-shadow: 5px 5px 0 #000000 !important;
+}
+
+.analysis-page .btn-primary:hover {
+    background: #BCE8B8 !important;
+    color: #000000 !important;
+    border-color: #000000 !important;
+    transform: translate(2px, 2px);
+    box-shadow: 3px 3px 0 #000000 !important;
+}
+/* =====================================================
+   HISTORY PAGE — TOP LEFT BACK BUTTON
+   STEP 14.18
+===================================================== */
+
+.history-back-button {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    z-index: 1000;
+}
+
+.history-back-button .btn {
+    background: #FFF9C2 !important;
+    color: #000000 !important;
+    border: 2px solid #000000 !important;
+    border-radius: 10px !important;
+    box-shadow: 5px 5px 0 #000000 !important;
+}
+
+.history-back-button .btn:hover {
+    background: #FEE7AD !important;
+    color: #000000 !important;
+    transform: translate(2px, 2px);
+    box-shadow: 3px 3px 0 #000000 !important;
+}
+/* Back to History button on analysis page */
+.analysis-page .back-button:hover {
+    background: #FEE7AD !important;
+    color: #000000 !important;
+    border-color: #000000 !important;
+    transform: translate(2px, 2px);
+    box-shadow: 3px 3px 0 #000000 !important;
+}
+.analyze-button:hover {
+    background-color: #F9D998 !important;
+}
+/* ==============================
+   HISTORY CARDS
+   ============================== */
+
+#historyContainer .card {
+    background-color: #BCE8B8 !important;
+    border: 2px solid #000000 !important;
+    border-radius: 12px !important;
+    box-shadow: 6px 6px 0 #000000 !important;
+}
+
+#historyContainer .card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0 #000000 !important;
+}
+
+#historyContainer .badge {
+    background-color: #FFF9C2 !important;
+    color: #000000 !important;
+    border: 1px solid #000000;
+}
+
+#historyContainer .text-muted {
+    color: #000000 !important;
+}
+/* ==============================
+   HISTORY CONTENT
+   ============================== */
+
+#historyContainer .card-text {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    line-height: 1.5;
+}
+
+#historyContainer .card-title {
+    word-break: break-word;
+}
+
+#historyContainer small {
+    word-break: break-word;
+}
+.analyze-again-button:hover {
+    background-color: #AE8A60 !important;
+    border-color: #AE8A60 !important;
+}
+a.analyze-again-button:hover,
+a.analyze-again-button:focus,
+a.analyze-again-button:active {
+    background-color: #AE8A60 !important;
+    border-color: #AE8A60 !important;
+    color: #000000 !important;
+}
+/* GUEST MODE BUTTON HOVER */
+
+.login-button:hover {
+    background: #AE8A60 !important;
+    border-color: #000000 !important;
+    color: #000000 !important;
+}
